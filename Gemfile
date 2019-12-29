@@ -7,7 +7,6 @@ end
 
 
 gem 'rails', '~> 5.1.7'
-gem 'sqlite3', '<1.4'
 gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -18,13 +17,16 @@ gem 'httparty', '~> 0.17.3'
 gem 'net_http_ssl_fix', require: 'net_http_ssl_fix'
 
 group :development, :test do
+  gem 'sqlite3', '<1.4'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
 end
-
+group :production do
+  gem 'pg'
+end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
