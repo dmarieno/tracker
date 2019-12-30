@@ -12,13 +12,5 @@
 
 ActiveRecord::Schema.define(version: 20191230080052) do
 
-  create_table "gpsdevices", force: :cascade do |t|
-    t.string "longitude"
-    t.string "latitude"
-    t.integer "time"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["time"], name: "index_gpsdevices_on_time"
-  end
 
 end

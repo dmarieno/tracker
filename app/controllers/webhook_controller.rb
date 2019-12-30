@@ -8,7 +8,7 @@ class WebhookController < ApplicationController
 
     data = {
               name: "SRTHooker",
-              url:'http://1f74869a.ngrok.io/'
+              url:'http://94f5d111.ngrok.io/webhook/logistidata'
             }
 
     @webhook = HTTParty.put('https://gps.logistimatics.com/api/webhook?device_id=45755',
@@ -16,7 +16,9 @@ class WebhookController < ApplicationController
                               :headers => {'Authorization' => "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOiAxNTc1MzI3ODY1LCAianRpIjogNTc3MjQsICJvcmdhbml6YXRpb25faWQiOiAyNzI3OX0.rJjUv3EtEiFAumKA2RCy2r1cjHyaAoFdC7BKchNsv3U"})
 
 
+
+  end
+  def webhookdata
     @event = JSON.parse(request.body.read)
-    @gurd = 'sit'
   end
 end

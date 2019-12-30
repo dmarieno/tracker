@@ -1,2 +1,0 @@
-class Gpsdevice < ApplicationRecord
-end
