@@ -1,0 +1,2 @@
+module GpsdevicesHelper
+end

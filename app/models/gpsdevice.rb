@@ -1,0 +1,2 @@
+class Gpsdevice < ApplicationRecord
+end

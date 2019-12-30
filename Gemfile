@@ -15,6 +15,9 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'httparty', '~> 0.17.3'
 gem 'net_http_ssl_fix', require: 'net_http_ssl_fix'
+gem 'bootstrap', '~> 4.4', '>= 4.4.1'
+gem 'jquery-rails'
+
 
 group :development, :test do
   gem 'sqlite3', '<1.4'

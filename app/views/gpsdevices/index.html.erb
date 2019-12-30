@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Gpsdevices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Longitude</th>
+      <th>String</th>
+      <th>Latitude</th>
+      <th>String</th>
+      <th>Timestamp</th>
+      <th>String</th>
+      <th></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gpsdevices.each do |gpsdevice| %>
+      <tr>
+        <td><%= gpsdevice.longitude %></td>
+        <td><%= gpsdevice.string %></td>
+        <td><%= gpsdevice.latitude %></td>
+        <td><%= gpsdevice.string %></td>
+        <td><%= gpsdevice.timestamp %></td>
+        <td><%= gpsdevice.string %></td>
+        <td><%= gpsdevice. %></td>
+        <td><%= link_to 'Show', gpsdevice %></td>
+        <td><%= link_to 'Edit', edit_gpsdevice_path(gpsdevice) %></td>
+        <td><%= link_to 'Destroy', gpsdevice, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Gpsdevice', new_gpsdevice_path %>
